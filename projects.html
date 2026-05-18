@@ -3,31 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Aayushi Patel</title>
+    <title>Projects — Aayushi Patel</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <div class="header-content">
-                <div class="profile-section">
-                    <img src="profile.png" alt="Aayushi Patel" class="profile-picture" id="profilePicture">
-                    <h1 class="name">Aayushi Patel</h1>
-                    <p class="tagline">Projects & Portfolio</p>
-                </div>
-                <nav class="main-nav">
-                    <a href="index.html" class="nav-link">← Back to Home</a>
-                </nav>
-            </div>
-        </header>
 
-        <!-- Projects Section -->
-        <section class="section">
+    <!-- Sub-page Header -->
+    <header class="header" style="min-height: 42vh; padding: 100px 40px 60px;">
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+        </div>
+        <div class="header-content" style="gap: 20px;">
+            <div class="profile-section" style="gap: 14px;">
+                <h1 class="name" style="font-size: 2.8rem;">Projects</h1>
+                <p class="tagline" style="min-height: auto;">Everything I've built</p>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">← Back to Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section visible" id="projects">
             <h2 class="section-title">All Projects</h2>
-            
             <div class="project-grid">
+
+                <div class="project-card">
+                    <h3 class="project-title">AI Teacher — Link & Think</h3>
+                    <div class="tech-tags">
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">React + TypeScript</span>
+                        <span class="tag">ChromaDB</span>
+                        <span class="tag">Mistral-7B</span>
+                        <span class="tag">RAG</span>
+                        <span class="tag">SSE Streaming</span>
+                        <span class="tag">HuggingFace API</span>
+                        <span class="tag">Zustand</span>
+                        <span class="tag">Tailwind CSS</span>
+                    </div>
+                    <ul class="project-description">
+                        <li>AI-powered study assistant — upload PDFs, DOCX, plain text, Markdown, videos, YouTube links, or web URLs and chat with them</li>
+                        <li>Each source is chunked, embedded via HuggingFace Inference API, and stored in a local ChromaDB vector database</li>
+                        <li>Answers stream word-by-word with inline <code style="font-size:0.78rem;color:var(--accent)">[Source: filename]</code> citations — nothing hallucinated</li>
+                        <li>RAG pipeline: sentence-transformers embeddings → cosine search → Mistral-7B-Instruct generation</li>
+                        <li>Runs fully locally — no cloud storage; the only external calls are to the HuggingFace Inference API</li>
+                        <li>Video support via Whisper ASR transcription; YouTube captions fetched automatically</li>
+                    </ul>
+                    <div class="project-footer">
+                        <a href="https://github.com/aayushipatel135/Link_And_Think" target="_blank" class="project-link">
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+
                 <div class="project-card">
                     <h3 class="project-title">QA System in Finance</h3>
                     <div class="tech-tags">
@@ -37,10 +69,16 @@
                         <span class="tag">RLHF</span>
                     </div>
                     <ul class="project-description">
-                        <li>Fine-tuned a pre-trained language model (Mistral-7B) for financial QA tasks</li>
-                        <li>Achieved 56% accuracy, closing the gap with GPT-3.5-turbo's baseline (60%)</li>
-                        <li>Developed end-to-end solutions using advanced techniques like Q-LoRA, instruction tuning, and RLHF to improve answer quality under resource constraints</li>
+                        <li>Fine-tuned Mistral-7B for financial QA tasks</li>
+                        <li>Achieved 56% accuracy, near GPT-3.5-turbo baseline (60%)</li>
+                        <li>End-to-end pipeline using Q-LoRA, instruction tuning, and RLHF to improve answer quality under resource constraints</li>
                     </ul>
+                    <div class="project-footer">
+                        <a href="https://github.com/aayushipatel135/Finance_QA_system_with_LLM_" target="_blank" class="project-link">
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            View on GitHub
+                        </a>
+                    </div>
                 </div>
 
                 <div class="project-card">
@@ -48,11 +86,18 @@
                     <div class="tech-tags">
                         <span class="tag">MUSE</span>
                         <span class="tag">Word Embeddings</span>
+                        <span class="tag">NLP</span>
                     </div>
                     <ul class="project-description">
-                        <li>Developed unsupervised cross-lingual word embeddings between Gujarati and Bengali</li>
-                        <li>Reduced dependency on parallel corpora, enabling better NLP capabilities for low-resource languages</li>
+                        <li>Unsupervised cross-lingual word embeddings between Gujarati and Bengali</li>
+                        <li>Reduced dependency on parallel corpora for low-resource NLP</li>
                     </ul>
+                    <div class="project-footer">
+                        <a href="https://github.com/aayushipatel135/Cross_lingual_Embeddings_for_Low_Resource_Languages" target="_blank" class="project-link">
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            View on GitHub
+                        </a>
+                    </div>
                 </div>
 
                 <div class="project-card">
@@ -63,9 +108,15 @@
                         <span class="tag">React</span>
                     </div>
                     <ul class="project-description">
-                        <li>Designed a personalized recommendation system to improve user experience and alleviate choice overload for customers</li>
-                        <li>Developed a user-friendly interface with Flask and React, showcasing the system in a functional web app</li>
+                        <li>Personalized recommendation system to reduce choice overload</li>
+                        <li>Full-stack web app with Flask backend and React frontend</li>
                     </ul>
+                    <div class="project-footer">
+                        <a href="https://github.com/aayushipatel135/Rs-assignment3" target="_blank" class="project-link">
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            View on GitHub
+                        </a>
+                    </div>
                 </div>
 
                 <div class="project-card">
@@ -76,9 +127,15 @@
                         <span class="tag">React</span>
                     </div>
                     <ul class="project-description">
-                        <li>Built an end-to-end sentiment analysis model that classifies text as positive, negative, or neutral</li>
-                        <li>Integrated the model with a web interface for real-time user feedback classification</li>
+                        <li>End-to-end model classifying text as positive, negative, or neutral</li>
+                        <li>Real-time web interface for live feedback classification</li>
                     </ul>
+                    <div class="project-footer">
+                        <a href="https://github.com/aayushipatel135/sentiment_analysis" target="_blank" class="project-link">
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            View on GitHub
+                        </a>
+                    </div>
                 </div>
 
                 <div class="project-card">
@@ -88,9 +145,15 @@
                         <span class="tag">Android</span>
                     </div>
                     <ul class="project-description">
-                        <li>Developed a model using LSTM to track and classify human activities (e.g., walking, running)</li>
-                        <li>Created a mobile app for real-time monitoring and data visualization</li>
+                        <li>LSTM model to classify activities (walking, running, etc.)</li>
+                        <li>Mobile app with real-time monitoring and data visualization</li>
                     </ul>
+                    <div class="project-footer">
+                        <a href="https://github.com/aayushipatel135/human_activity_recognization" target="_blank" class="project-link">
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            View on GitHub
+                        </a>
+                    </div>
                 </div>
 
                 <div class="project-card">
@@ -100,17 +163,19 @@
                         <span class="tag">SQL</span>
                     </div>
                     <ul class="project-description">
-                        <li>Developed a Flutter-based application to help recruiters rank resumes based on specific job requirements</li>
-                        <li>Integrated customizable features for evaluating candidates more efficiently</li>
+                        <li>Flutter app to help recruiters rank resumes by job requirements</li>
+                        <li>Customizable evaluation criteria for efficient candidate screening</li>
                     </ul>
                 </div>
 
-                <!-- Add more projects here as needed -->
             </div>
         </section>
-    </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Aayushi Patel &nbsp;·&nbsp; <a href="index.html" style="color: var(--accent); text-decoration: none;">← Back to Portfolio</a></p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
