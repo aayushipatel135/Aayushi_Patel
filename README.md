@@ -55,7 +55,7 @@ I author ML-focused articles on Medium—mixing theory, code snippets, and visua
 ## 📚 Teaching & Certifications
 
 - Teaching Assistant (DA-IICT): Design & Analysis of Algorithms (Aug–Dec 2022), Probability & Statistics (Jan–Apr 2023)
-- Certifications: ML A-Z (Udemy), DBMS (NPTEL), Programming in C/C++ (NPTEL), Intro to C (NPTEL)
+- Certifications: Prompt Engineering for AI Bootcamp 2025 (Udemy), ML A-Z (Udemy), DBMS (NPTEL), Programming in C/C++ (NPTEL), Intro to C (NPTEL)
 
 ## 🌍 Languages & Hobbies
 
