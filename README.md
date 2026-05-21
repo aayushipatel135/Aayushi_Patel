@@ -1,6 +1,6 @@
 # Hi there, I'm Aayushi Patel 👋
 
-Versatile technologist with an M.Tech in ICT (ML specialization) from DA-IICT and hands-on experience as a Software Developer at IBM. I love building scalable systems, instruction-tuned LLM solutions, recommender engines, computer-vision pipelines, and end-to-end ML products that solve real problems.
+M.Tech graduate in Machine Learning (DA-IICT) and Software Developer at IBM (Gift City, Gandhinagar). I work across the full ML lifecycle — fine-tuning LLMs with LoRA and RLHF, building computer-vision pipelines with Grad-CAM explainability, and shipping production-ready full-stack applications with FastAPI, React, and Streamlit. I like problems where careful ML engineering makes a real, measurable difference.
 
 🌐 **Portfolio:** [aayushipatel135.github.io/Aayushi_Patel](https://aayushipatel135.github.io/Aayushi_Patel/)
 

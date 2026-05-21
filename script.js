@@ -2,7 +2,7 @@
 const taglines = [
   'ML Engineer · Software Developer',
   'Building Intelligent Systems',
-  'NLP & Deep Learning Enthusiast',
+  'NLP · Computer Vision · LLMs',
   'IBM · DA-IICT Alumni',
 ];
 
