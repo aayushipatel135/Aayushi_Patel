@@ -55,11 +55,27 @@ Natural Language Processing · Machine Learning · Deep Learning · Large Langua
 
 ## ✍️ Technical Writing
 
-I author ML-focused articles on Medium — mixing theory, code snippets, and visuals to explain:
+I author ML-focused articles on Medium — mixing theory, code snippets, and visuals to make complex topics accessible to both technical and non-technical audiences.
 
-- SVM: Machine Learning's Sharpest Tool
-- Building Recommendation Systems
-- Instruction Tuning: Teaching LLMs to Follow Human Directions
+| # | Blog | Link |
+|---|------|------|
+| 1 | RAG (Retrieval-Augmented Generation) | [Read →](https://medium.com/@aayushipatel135/rag-retrieval-augmented-generation-b330a13c9134) |
+| 2 | Prompt Engineering | [Read →](https://medium.com/@aayushipatel135/prompt-engineering-f975446ac122) |
+| 3 | Instruction Tuning: Teaching LLMs to Follow Human Directions | [Read →](https://medium.com/@aayushipatel135/instruction-tuning-teaching-large-language-models-to-follow-human-directions-639fadbecfd7) |
+| 4 | Lasso Regression | [Read →](https://medium.com/@aayushipatel135/lasso-regression-fbe3992c230d) |
+| 5 | Ridge Regression | [Read →](https://medium.com/@aayushipatel135/ridge-regression-4f1e11cb4d9e) |
+| 6 | 🔁 Recurrent Neural Networks (RNNs) | [Read →](https://medium.com/@aayushipatel135/recurrent-neural-networks-rnns-1369f38d307d) |
+| 7 | 🌲 Understanding Random Forest | [Read →](https://medium.com/@aayushipatel135/understanding-random-forest-a-powerful-ensemble-learning-method-fb4bf147860d) |
+| 8 | 🎯 SVM Demystified: Machine Learning's Sharpest Tool | [Read →](https://medium.com/@aayushipatel135/svm-demystified-machine-learnings-sharpest-tool-0d5bb4200e4b) |
+| 9 | 🔓 Unlocking the Power of TF-IDF | [Read →](https://medium.com/@aayushipatel135/unlocking-the-power-of-tf-idf-elevating-your-text-analysis-0ff51deb826f) |
+| 10 | 🌳 Decision Trees in Machine Learning | [Read →](https://medium.com/@aayushipatel135/decision-trees-in-machine-learning-a-clear-path-to-smarter-decisions-5bc5dbba2282) |
+| 11 | 🔍 Data Preprocessing: The Key to Better ML Models | [Read →](https://medium.com/@aayushipatel135/data-preprocessing-the-key-to-better-machine-learning-models-76c3f278f5b3) |
+| 12 | 💫 Understanding Linear Regression: A Beginner's Guide | [Read →](https://medium.com/@aayushipatel135/understanding-linear-regression-a-beginners-guide-6e28fd6277ea) |
+| 13 | ✨ Bag-of-Words: A Comprehensive Guide to Text Representation | [Read →](https://medium.com/@aayushipatel135/bag-of-words-a-comprehensive-guide-to-text-representation-7a6b77f89872) |
+| 14 | ✨ Unsupervised Machine Learning | [Read →](https://medium.com/@aayushipatel135/unsupervised-machine-learning-ade9d46a0a71) |
+| 15 | 🌟 Supervised Machine Learning | [Read →](https://medium.com/@aayushipatel135/supervised-machine-learning-50cf07abca24) |
+| 16 | Let's Explore Machine Learning! | [Read →](https://medium.com/@aayushipatel135/machine-learning-4b6b3c7ca76b) |
+| 17 | Recommendation System | [Read →](https://medium.com/@aayushipatel135/recommendation-system-04ef708a4dcb) |
 
 ---
 
