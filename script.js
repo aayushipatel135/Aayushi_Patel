@@ -86,6 +86,80 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
+// Scroll progress bar
+const scrollProgress = document.getElementById('scrollProgress');
+if (scrollProgress) {
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    scrollProgress.style.width = scrolled + '%';
+  }, { passive: true });
+}
+
+// Cursor-follow spotlight in hero
+const heroHeader = document.getElementById('home');
+if (heroHeader) {
+  heroHeader.addEventListener('mousemove', (e) => {
+    const rect = heroHeader.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    heroHeader.style.setProperty('--mx', x + '%');
+    heroHeader.style.setProperty('--my', y + '%');
+  });
+}
+
+// Hero stat count-up
+const statNums = document.querySelectorAll('.stat-num');
+if (statNums.length) {
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.target, 10) || 0;
+      const step = Math.max(1, Math.round(target / 36));
+      let cur = 0;
+      (function tick() {
+        cur += step;
+        if (cur >= target) { el.textContent = target; return; }
+        el.textContent = cur;
+        requestAnimationFrame(tick);
+      })();
+      statObserver.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  statNums.forEach(el => statObserver.observe(el));
+}
+
+// Staggered project card reveal
+const projectCards = document.querySelectorAll('.project-card');
+if (projectCards.length) {
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const card = entry.target;
+      const i = Array.from(projectCards).indexOf(card);
+      setTimeout(() => card.classList.add('card-visible'), (i % 3) * 90);
+      cardObserver.unobserve(card);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+  projectCards.forEach(card => cardObserver.observe(card));
+}
+
+// Project card tilt-on-hover
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const rotateX = ((y - rect.height / 2) / rect.height) * -6;
+    const rotateY = ((x - rect.width / 2) / rect.width) * 6;
+    card.style.transform = `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+  });
+});
+
 // Profile picture fallback
 const profilePicture = document.getElementById('profilePicture');
 if (profilePicture) {

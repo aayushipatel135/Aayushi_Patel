@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aayushi Patel — Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
     <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
 </head>
 <body>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
 
     <!-- Fixed Navbar -->
     <nav class="navbar" id="navbar">
@@ -20,17 +22,19 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#education">Education</a></li>
         </ul>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-            </svg>
-            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-        </button>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -40,16 +44,24 @@
             <div class="orb orb-2"></div>
             <div class="orb orb-3"></div>
         </div>
+        <div class="dot-grid"></div>
+        <div class="cursor-glow"></div>
 
         <div class="header-content">
             <div class="profile-section">
                 <div class="profile-picture-wrapper">
                     <img src="profile.png" alt="Aayushi Patel" class="profile-picture" id="profilePicture">
                 </div>
+                <span class="hero-kicker">ML Engineer &amp; Software Developer</span>
                 <h1 class="name">Aayushi Patel</h1>
                 <p class="tagline">
                     <span class="tagline-text"></span><span class="cursor"></span>
                 </p>
+                <p class="hero-statement">I take AI systems from <em>concept to production</em> — fine-tuned LLMs, explainable vision models, and full-stack tools people actually use.</p>
+            </div>
+
+            <div class="status-row">
+                <span class="status-badge"><span class="status-dot"></span>Open to new opportunities</span>
             </div>
 
             <div class="contact-info">
@@ -78,13 +90,26 @@
                     <a href="https://leetcode.com/u/aayushi_patel/" target="_blank" class="contact-link">LeetCode</a>
                 </div>
             </div>
-        </div>
 
-        <div class="scroll-indicator">
-            <span>scroll</span>
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num" data-target="2">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Years @ IBM</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num" data-target="8">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Projects Shipped</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-prefix">#</span><span class="stat-num" data-target="1">0</span>
+                    <span class="stat-label">Hackathon Rank</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num" data-target="22">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">ML Articles Published</span>
+                </div>
+            </div>
+
         </div>
     </header>
 
@@ -150,7 +175,8 @@
         <section class="section" id="projects">
             <h2 class="section-title">Projects</h2>
             <div class="project-grid">
-                <div class="project-card">
+                <div class="project-card featured">
+                    <span class="featured-badge">✦ Flagship</span>
                     <h3 class="project-title">AI Teacher — Link & Think</h3>
                     <div class="tech-tags">
                         <span class="tag">FastAPI</span>
@@ -159,6 +185,10 @@
                         <span class="tag">Mistral-7B</span>
                         <span class="tag">RAG</span>
                         <span class="tag">SSE Streaming</span>
+                    </div>
+                    <div class="project-highlight-stat">
+                        <span class="num">7</span>
+                        <span class="lbl">source types supported — PDF, DOCX, video, YouTube &amp; more</span>
                     </div>
                     <ul class="project-description">
                         <li>AI study assistant — upload PDFs, docs, videos, or URLs and chat with them</li>
@@ -173,7 +203,8 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card featured">
+                    <span class="featured-badge">✦ Flagship</span>
                     <h3 class="project-title">CerebroScan AI — Brain Tumor MRI Classification</h3>
                     <div class="tech-tags">
                         <span class="tag">TensorFlow / Keras</span>
@@ -182,6 +213,10 @@
                         <span class="tag">Grad-CAM</span>
                         <span class="tag">Streamlit</span>
                         <span class="tag">Transfer Learning</span>
+                    </div>
+                    <div class="project-highlight-stat">
+                        <span class="num">4</span>
+                        <span class="lbl">tumor classes classified with Grad-CAM explainability</span>
                     </div>
                     <ul class="project-description">
                         <li>Deep-learning pipeline classifying brain MRI scans into 4 categories — Glioma, Meningioma, Pituitary, and No Tumor</li>
@@ -255,54 +290,6 @@
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <h3 class="project-title">Sentiment Analysis</h3>
-                    <div class="tech-tags">
-                        <span class="tag">NLP</span>
-                        <span class="tag">Flask</span>
-                        <span class="tag">React</span>
-                    </div>
-                    <ul class="project-description">
-                        <li>End-to-end model classifying text as positive, negative, or neutral</li>
-                        <li>Real-time web interface for live feedback classification</li>
-                    </ul>
-                    <div class="project-footer">
-                        <a href="https://github.com/aayushipatel135/sentiment_analysis" target="_blank" class="project-link">
-                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                            View on GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3 class="project-title">Human Activity Recognition</h3>
-                    <div class="tech-tags">
-                        <span class="tag">LSTM</span>
-                        <span class="tag">Android</span>
-                    </div>
-                    <ul class="project-description">
-                        <li>LSTM model to classify activities (walking, running, etc.)</li>
-                        <li>Mobile app with real-time monitoring and visualization</li>
-                    </ul>
-                    <div class="project-footer">
-                        <a href="https://github.com/aayushipatel135/human_activity_recognization" target="_blank" class="project-link">
-                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                            View on GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3 class="project-title">Resume Ranking</h3>
-                    <div class="tech-tags">
-                        <span class="tag">Flutter</span>
-                        <span class="tag">SQL</span>
-                    </div>
-                    <ul class="project-description">
-                        <li>Flutter app for ranking resumes against job requirements</li>
-                        <li>Customizable evaluation criteria for efficient candidate screening</li>
-                    </ul>
-                </div>
             </div>
             <div class="view-all-projects">
                 <a href="projects.html" class="view-all-link">View All Projects →</a>
@@ -312,6 +299,26 @@
         <!-- Skills -->
         <section class="section" id="skills">
             <h2 class="section-title">Skills</h2>
+            <div class="marquee">
+                <div class="marquee-track">
+                    <span class="marquee-item">Python</span>
+                    <span class="marquee-item">RAG</span>
+                    <span class="marquee-item">LLM Fine-tuning</span>
+                    <span class="marquee-item">React</span>
+                    <span class="marquee-item">FastAPI</span>
+                    <span class="marquee-item">Computer Vision</span>
+                    <span class="marquee-item">TensorFlow</span>
+                    <span class="marquee-item">LangChain</span>
+                    <span class="marquee-item">Python</span>
+                    <span class="marquee-item">RAG</span>
+                    <span class="marquee-item">LLM Fine-tuning</span>
+                    <span class="marquee-item">React</span>
+                    <span class="marquee-item">FastAPI</span>
+                    <span class="marquee-item">Computer Vision</span>
+                    <span class="marquee-item">TensorFlow</span>
+                    <span class="marquee-item">LangChain</span>
+                </div>
+            </div>
             <div class="skills-container">
                 <div class="skill-category">
                     <h3 class="skill-category-title">Languages & Frameworks</h3>
@@ -453,8 +460,11 @@
         <section class="section">
             <h2 class="section-title">Certificates</h2>
             <ul class="certificates-list">
-                <li>The Complete Prompt Engineering for AI Bootcamp (2025) — Udemy</li>
-                <li>Machine Learning A-Z™: Hands-On Python & R In Data Science — Udemy</li>
+                <li><a class="cert-link" href="https://www.credly.com/badges/bc4cad97-df33-492f-a042-6ec277e91a91/public_url" target="_blank" rel="noopener">Data Science Foundations - Level 1 — IBM</a></li>
+                <li><a class="cert-link" href="https://www.credly.com/badges/3bec06c6-b079-4ad1-8bbf-306a1b9dedaa/public_url" target="_blank" rel="noopener">Trustworthy AI and AI Ethics — IBM</a></li>
+                <li><a class="cert-link" href="https://www.udemy.com/certificate/UC-92ea0d7e-90c3-4cf3-bf6f-0fb8ebbfc7f3/" target="_blank" rel="noopener">The Complete Prompt Engineering for AI Bootcamp (2025) — Udemy</a></li>
+                <li><a class="cert-link" href="https://www.udemy.com/certificate/UC-464eb7b7-98ee-4951-9d25-285ca1f9c5d3/" target="_blank" rel="noopener">Machine Learning A-Z™: Hands-On Python & R In Data Science — Udemy</a></li>
+                <li><a class="cert-link" href="https://www.credly.com/badges/acbd060d-5af8-4fc4-b441-4c69c9805e47/public_url" target="_blank" rel="noopener">Docker Essentials: A Developer Introduction — IBM</a></li>
                 <li>Data Base Management System — NPTEL</li>
                 <li>Programming in C++ — NPTEL</li>
                 <li>Introduction to Programming in C — NPTEL</li>
@@ -478,7 +488,7 @@
     </main>
 
     <footer>
-        <p>© 2025 Aayushi Patel &nbsp;·&nbsp; Built with passion for AI & ML</p>
+        <p>© 2026 Aayushi Patel &nbsp;·&nbsp; Built with passion for AI & ML</p>
     </footer>
 
     <script src="script.js"></script>
