@@ -664,6 +664,10 @@ footer {
   background: linear-gradient(135deg, #0f172a 0%, var(--accent) 55%, var(--violet) 100%);
   -webkit-background-clip: text; background-clip: text;
 }
+[data-theme="light"] .status-badge {
+  background: rgba(34, 160, 80, 0.1); border-color: rgba(34, 160, 80, 0.35); color: #1c8a4a;
+}
+[data-theme="light"] .status-dot { background: #22a050; box-shadow: 0 0 8px rgba(34, 160, 80, 0.6); }
 [data-theme="light"] .contact-item { background: rgba(0, 0, 0, 0.03); }
 [data-theme="light"] .skill-tag { background: rgba(0, 0, 0, 0.03); }
 [data-theme="light"] .interest-tag { background: rgba(0, 0, 0, 0.025); }
