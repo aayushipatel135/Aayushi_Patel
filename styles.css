@@ -525,16 +525,50 @@ body::after {
 
 /* ─── EDUCATION ─── */
 .education-item {
+  position: relative;
   margin-bottom: 14px; padding: 18px 22px;
   background: var(--card); border: 1px solid var(--border); border-radius: var(--r);
   display: flex; justify-content: space-between; align-items: center;
   flex-wrap: wrap; gap: 10px; transition: var(--ease);
 }
-.education-item:hover { border-color: var(--border-accent); }
+.education-item:hover { border-color: var(--border-accent); box-shadow: 0 10px 30px var(--accent-glow); }
 .degree { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--text); }
 .education-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
 .institution { font-weight: 600; color: var(--accent); font-size: 0.875rem; }
 .year { color: var(--text-3); font-size: 0.85rem; }
+.cpi {
+  font-size: 0.75rem; font-weight: 700; color: var(--accent);
+  padding: 2px 10px; border-radius: 12px; background: var(--accent-dim);
+  margin-top: 2px;
+}
+
+.education-preview {
+  position: absolute; z-index: 10;
+  bottom: calc(100% + 14px); left: 50%;
+  width: 300px; max-width: 82vw;
+  border-radius: var(--r); overflow: hidden;
+  border: 1px solid var(--border-accent);
+  background: var(--card);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.4);
+  opacity: 0; pointer-events: none;
+  transform: translateX(-50%) translateY(10px) scale(0.96);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.education-preview::after {
+  content: ''; position: absolute; top: 100%; left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent; border-top-color: var(--card);
+}
+.education-preview img { display: block; width: 100%; height: auto; }
+.education-item:hover .education-preview {
+  opacity: 1; pointer-events: auto;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+@media (max-width: 560px) {
+  .education-preview { width: 240px; bottom: auto; top: calc(100% + 14px); }
+  .education-preview::after { top: auto; bottom: 100%; border-top-color: transparent; border-bottom-color: var(--card); }
+}
 
 /* ─── ACHIEVEMENTS ─── */
 .achievements-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }

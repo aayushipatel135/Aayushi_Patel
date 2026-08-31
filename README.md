@@ -9,6 +9,7 @@ M.Tech graduate in Machine Learning (DA-IICT) and Software Developer at IBM (Gif
 ## ⚙️ What I Do
 
 - Build and fine-tune Large Language Models (LLMs) for domain-specific tasks
+- Design production-grade RAG systems — retrieval, evaluation (RAGAS), observability, and security
 - Design deep-learning pipelines for Computer Vision (CNNs, Transfer Learning, Grad-CAM)
 - Build recommender systems and NLP pipelines for production use
 - Develop full-stack prototypes using FastAPI, React, Flask, Flutter, and SQL
@@ -45,11 +46,14 @@ RAG · Transfer Learning · Fine-tuning (LoRA / PEFT) · RLHF · CNN · LSTM · 
 **Tools & Platforms**
 Git / GitHub · ChromaDB · HuggingFace API · Jupyter Notebook · Anaconda · Android Studio
 
+**LLMOps & Production RAG**
+Agentic RAG · Multi-Vector Retrieval (ColBERT) · Corrective / Self-RAG · RAG Evaluation (RAGAS) · LLM Observability (LangSmith, Arize Phoenix) · Prompt Injection Defense · Async & Caching Pipelines
+
 ---
 
 ## 🎯 Areas of Interest
 
-Natural Language Processing · Machine Learning · Deep Learning · Large Language Models · Computer Vision · Recommendation Systems · Data Mining · Information Retrieval · Research
+Natural Language Processing · Machine Learning · Deep Learning · Large Language Models · Agentic AI · Computer Vision · Recommendation Systems · Data Mining · Information Retrieval · LLM Observability · AI / LLM Security · Research
 
 ---
 
@@ -78,28 +82,38 @@ I author ML-focused articles on Medium — mixing theory, code snippets, and vis
 | 17 | Contextual Compression and Filtering Retrieved Chunks in RAG Systems | [Read →](https://medium.com/@aayushipatel135/contextual-compression-and-filtering-retrieved-chunks-in-rag-systems-c558fc68ae5b) |
 | 18 | GraphRAG: Combining Knowledge Graphs and RAG with Neo4j | [Read →](https://medium.com/@aayushipatel135/graphrag-combining-knowledge-graphs-and-rag-with-neo4j-17f6be8e9a4b) |
 | 19 | Parent–Child Chunking and Hierarchical Indexing in RAG | [Read →](https://medium.com/@aayushipatel135/parent-child-chunking-and-hierarchical-indexing-in-rag-a-practical-guide-to-better-retrieval-de861b3bd2cb) |
-| 20 | Fine-Tuning of LLM | [Read →](https://medium.com/@aayushipatel135/fine-tuning-of-llm-e3af256c3f3d) |
-| 21 | RAG (Retrieval-Augmented Generation) | [Read →](https://medium.com/@aayushipatel135/rag-retrieval-augmented-generation-b330a13c9134) |
-| 22 | Prompt Engineering | [Read →](https://medium.com/@aayushipatel135/prompt-engineering-f975446ac122) |
-| 23 | Instruction Tuning: Teaching LLMs to Follow Human Directions | [Read →](https://medium.com/@aayushipatel135/instruction-tuning-teaching-large-language-models-to-follow-human-directions-639fadbecfd7) |
-| 24 | 🎯 SVM Demystified: Machine Learning's Sharpest Tool | [Read →](https://medium.com/@aayushipatel135/svm-demystified-machine-learnings-sharpest-tool-0d5bb4200e4b) |
-| 25 | 🔁 Recurrent Neural Networks (RNNs) | [Read →](https://medium.com/@aayushipatel135/recurrent-neural-networks-rnns-1369f38d307d) |
-| 26 | Recommendation System | [Read →](https://medium.com/@aayushipatel135/recommendation-system-04ef708a4dcb) |
-| 27 | Content-Based Filtering: How Machines Learn Your Taste | [Read →](https://medium.com/@aayushipatel135/content-based-filtering-how-machines-learn-your-taste-295dbde50267) |
-| 28 | Collaborative Filtering: Wisdom of the Crowd, Personalised for You | [Read →](https://medium.com/@aayushipatel135/collaborative-filtering-wisdom-of-the-crowd-personalised-for-you-5fc7ff3a97d1) |
-| 29 | Knowledge-Based Filtering: Recommending Without a History | [Read →](https://medium.com/@aayushipatel135/knowledge-based-filtering-recommending-without-a-history-ad83eff818e5) |
-| 30 | Session-Based & Sequential Recommenders: What You Just Did Matters Most | [Read →](https://medium.com/@aayushipatel135/session-based-sequential-recommenders-what-you-just-did-matters-most-24eed9588694) |
-| 31 | 🌲 Understanding Random Forest | [Read →](https://medium.com/@aayushipatel135/understanding-random-forest-a-powerful-ensemble-learning-method-fb4bf147860d) |
-| 32 | Lasso Regression | [Read →](https://medium.com/@aayushipatel135/lasso-regression-fbe3992c230d) |
-| 33 | Ridge Regression | [Read →](https://medium.com/@aayushipatel135/ridge-regression-4f1e11cb4d9e) |
-| 34 | 🔓 Unlocking the Power of TF-IDF | [Read →](https://medium.com/@aayushipatel135/unlocking-the-power-of-tf-idf-elevating-your-text-analysis-0ff51deb826f) |
-| 35 | 🌳 Decision Trees in Machine Learning | [Read →](https://medium.com/@aayushipatel135/decision-trees-in-machine-learning-a-clear-path-to-smarter-decisions-5bc5dbba2282) |
-| 36 | 🔍 Data Preprocessing: The Key to Better ML Models | [Read →](https://medium.com/@aayushipatel135/data-preprocessing-the-key-to-better-machine-learning-models-76c3f278f5b3) |
-| 37 | 💫 Understanding Linear Regression: A Beginner's Guide | [Read →](https://medium.com/@aayushipatel135/understanding-linear-regression-a-beginners-guide-6e28fd6277ea) |
-| 38 | ✨ Bag-of-Words: A Comprehensive Guide to Text Representation | [Read →](https://medium.com/@aayushipatel135/bag-of-words-a-comprehensive-guide-to-text-representation-7a6b77f89872) |
-| 39 | 🌟 Supervised Machine Learning | [Read →](https://medium.com/@aayushipatel135/supervised-machine-learning-50cf07abca24) |
-| 40 | ✨ Unsupervised Machine Learning | [Read →](https://medium.com/@aayushipatel135/unsupervised-machine-learning-ade9d46a0a71) |
-| 41 | Let's Explore Machine Learning! | [Read →](https://medium.com/@aayushipatel135/machine-learning-4b6b3c7ca76b) |
+| 20 | Multi-Vector Retrieval: ColBERT, PLAID, and Late Interaction Models | [Read →](https://medium.com/@aayushipatel135/multi-vector-retrieval-colbert-plaid-and-late-interaction-models-01020215cdc6) |
+| 21 | Agentic RAG: When LLMs Decide When and What to Retrieve | [Read →](https://medium.com/@aayushipatel135/agentic-rag-when-llms-decide-when-and-what-to-retrieve-978eca869a80) |
+| 22 | Corrective RAG and Self-RAG: Retrieval Systems That Judge Their Own Context | [Read →](https://medium.com/@aayushipatel135/corrective-rag-and-self-rag-retrieval-systems-that-judge-their-own-context-fa962314879b) |
+| 23 | Prompt Engineering for RAG: Designing the Context Window That Actually Works | [Read →](https://medium.com/@aayushipatel135/prompt-engineering-for-rag-designing-the-context-window-that-actually-works-a6be9e2c86de) |
+| 24 | Handling Long Contexts in RAG — The "Lost in the Middle" Problem | [Read →](https://medium.com/@aayushipatel135/handling-long-contexts-in-rag-the-lost-in-the-middle-problem-c30cb8ce9760) |
+| 25 | Citation and Grounding in RAG Responses: Attribution and Source Highlighting | [Read →](https://medium.com/@aayushipatel135/citation-and-grounding-in-rag-responses-attribution-and-source-highlighting-bec5fcf18b85) |
+| 26 | Evaluating RAG Systems — RAGAS, Faithfulness, Relevance, and Recall Metrics | [Read →](https://medium.com/@aayushipatel135/evaluating-rag-systems-ragas-faithfulness-relevance-and-recall-metrics-2dc02ae4be36) |
+| 27 | RAG Observability — Tracing, Logging, LangSmith, Arize Phoenix | [Read →](https://medium.com/@aayushipatel135/rag-observability-tracing-logging-langsmith-arize-phoenix-93f62cfd13a9) |
+| 28 | RAG Security: Prompt Injection, Data Poisoning, and PII Leakage | [Read →](https://medium.com/@aayushipatel135/rag-security-prompt-injection-data-poisoning-and-pii-leakage-3cd82b8b4125) |
+| 29 | Scaling RAG to Production — Caching, Async Pipelines, Cost Optimization | [Read →](https://medium.com/@aayushipatel135/scaling-rag-to-production-caching-async-pipelines-cost-optimization-27dff40f8371) |
+| 30 | Fine-Tuning of LLM | [Read →](https://medium.com/@aayushipatel135/fine-tuning-of-llm-e3af256c3f3d) |
+| 31 | RAG (Retrieval-Augmented Generation) | [Read →](https://medium.com/@aayushipatel135/rag-retrieval-augmented-generation-b330a13c9134) |
+| 32 | Prompt Engineering | [Read →](https://medium.com/@aayushipatel135/prompt-engineering-f975446ac122) |
+| 33 | Instruction Tuning: Teaching LLMs to Follow Human Directions | [Read →](https://medium.com/@aayushipatel135/instruction-tuning-teaching-large-language-models-to-follow-human-directions-639fadbecfd7) |
+| 34 | 🎯 SVM Demystified: Machine Learning's Sharpest Tool | [Read →](https://medium.com/@aayushipatel135/svm-demystified-machine-learnings-sharpest-tool-0d5bb4200e4b) |
+| 35 | 🔁 Recurrent Neural Networks (RNNs) | [Read →](https://medium.com/@aayushipatel135/recurrent-neural-networks-rnns-1369f38d307d) |
+| 36 | Recommendation System | [Read →](https://medium.com/@aayushipatel135/recommendation-system-04ef708a4dcb) |
+| 37 | Content-Based Filtering: How Machines Learn Your Taste | [Read →](https://medium.com/@aayushipatel135/content-based-filtering-how-machines-learn-your-taste-295dbde50267) |
+| 38 | Collaborative Filtering: Wisdom of the Crowd, Personalised for You | [Read →](https://medium.com/@aayushipatel135/collaborative-filtering-wisdom-of-the-crowd-personalised-for-you-5fc7ff3a97d1) |
+| 39 | Knowledge-Based Filtering: Recommending Without a History | [Read →](https://medium.com/@aayushipatel135/knowledge-based-filtering-recommending-without-a-history-ad83eff818e5) |
+| 40 | Session-Based & Sequential Recommenders: What You Just Did Matters Most | [Read →](https://medium.com/@aayushipatel135/session-based-sequential-recommenders-what-you-just-did-matters-most-24eed9588694) |
+| 41 | 🌲 Understanding Random Forest | [Read →](https://medium.com/@aayushipatel135/understanding-random-forest-a-powerful-ensemble-learning-method-fb4bf147860d) |
+| 42 | Lasso Regression | [Read →](https://medium.com/@aayushipatel135/lasso-regression-fbe3992c230d) |
+| 43 | Ridge Regression | [Read →](https://medium.com/@aayushipatel135/ridge-regression-4f1e11cb4d9e) |
+| 44 | 🔓 Unlocking the Power of TF-IDF | [Read →](https://medium.com/@aayushipatel135/unlocking-the-power-of-tf-idf-elevating-your-text-analysis-0ff51deb826f) |
+| 45 | 🌳 Decision Trees in Machine Learning | [Read →](https://medium.com/@aayushipatel135/decision-trees-in-machine-learning-a-clear-path-to-smarter-decisions-5bc5dbba2282) |
+| 46 | 🔍 Data Preprocessing: The Key to Better ML Models | [Read →](https://medium.com/@aayushipatel135/data-preprocessing-the-key-to-better-machine-learning-models-76c3f278f5b3) |
+| 47 | 💫 Understanding Linear Regression: A Beginner's Guide | [Read →](https://medium.com/@aayushipatel135/understanding-linear-regression-a-beginners-guide-6e28fd6277ea) |
+| 48 | ✨ Bag-of-Words: A Comprehensive Guide to Text Representation | [Read →](https://medium.com/@aayushipatel135/bag-of-words-a-comprehensive-guide-to-text-representation-7a6b77f89872) |
+| 49 | 🌟 Supervised Machine Learning | [Read →](https://medium.com/@aayushipatel135/supervised-machine-learning-50cf07abca24) |
+| 50 | ✨ Unsupervised Machine Learning | [Read →](https://medium.com/@aayushipatel135/unsupervised-machine-learning-ade9d46a0a71) |
+| 51 | Let's Explore Machine Learning! | [Read →](https://medium.com/@aayushipatel135/machine-learning-4b6b3c7ca76b) |
 
 ---
 
@@ -114,8 +128,8 @@ I author ML-focused articles on Medium — mixing theory, code snippets, and vis
 
 ## 🎓 Education
 
-- **M.Tech ICT (ML Specialization)** — DA-IICT (2022–2024)
-- **B.E. Computer Engineering** — LDRP-ITR (2018–2022)
+- **M.Tech ICT (ML Specialization)** — DA-IICT (2022–2024) · CPI: 7.84
+- **B.E. Computer Engineering** — LDRP-ITR (2018–2022) · CPI: 8.74
 
 ---
 
