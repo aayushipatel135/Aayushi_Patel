@@ -1,37 +1,39 @@
 :root {
-  --bg: #0b0a0d;
-  --bg-2: #121013;
-  --card: #17151a;
-  --accent: #ff5a36;
-  --accent-dim: rgba(255, 90, 54, 0.12);
-  --accent-glow: rgba(255, 90, 54, 0.45);
-  --violet: #ffc23f;
-  --violet-dim: rgba(255, 194, 63, 0.12);
-  --text: #f6f3ec;
-  --text-2: #b6afa3;
-  --text-3: #6c665c;
+  --bg: #090b14;
+  --bg-2: #0d1020;
+  --card: #121529;
+  --accent: #6d5ef7;
+  --accent-dim: rgba(109, 94, 247, 0.12);
+  --accent-glow: rgba(109, 94, 247, 0.45);
+  --violet: #22d3ee;
+  --violet-dim: rgba(34, 211, 238, 0.12);
+  --text: #eef1f8;
+  --text-2: #9aa3b8;
+  --text-3: #5c6478;
   --border: rgba(255, 255, 255, 0.08);
-  --border-accent: rgba(255, 90, 54, 0.3);
-  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
-  --r: 12px;
+  --border-accent: rgba(109, 94, 247, 0.35);
+  --on-accent: #080a16;
+  --font-display: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
+  --r: 14px;
   --ease: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ─── LIGHT THEME ─── */
 [data-theme="light"] {
-  --bg: #faf6ef;
-  --bg-2: #f3ede2;
+  --bg: #f5f6fb;
+  --bg-2: #eceef7;
   --card: #ffffff;
-  --accent: #e0430f;
-  --accent-dim: rgba(224, 67, 15, 0.08);
-  --accent-glow: rgba(224, 67, 15, 0.3);
-  --violet: #a3730a;
-  --violet-dim: rgba(163, 115, 10, 0.09);
-  --text: #201a12;
-  --text-2: #5b5344;
-  --text-3: #a49b89;
+  --accent: #4f46e5;
+  --accent-dim: rgba(79, 70, 229, 0.08);
+  --accent-glow: rgba(79, 70, 229, 0.3);
+  --violet: #0891b2;
+  --violet-dim: rgba(8, 145, 178, 0.09);
+  --text: #121528;
+  --text-2: #525a72;
+  --text-3: #9298ab;
   --border: rgba(0, 0, 0, 0.08);
-  --border-accent: rgba(224, 67, 15, 0.3);
+  --border-accent: rgba(79, 70, 229, 0.3);
+  --on-accent: #080a16;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -97,7 +99,7 @@ body::after {
 .nav-actions { display: flex; align-items: center; gap: 12px; }
 .resume-btn {
   display: inline-flex; align-items: center; gap: 6px;
-  color: #04121a; background: linear-gradient(135deg, var(--accent), var(--violet));
+  color: var(--on-accent); background: linear-gradient(135deg, var(--accent), var(--violet));
   padding: 8px 18px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;
   text-decoration: none; transition: var(--ease); white-space: nowrap;
 }
@@ -192,11 +194,11 @@ body::after {
   min-height: 1.8em; display: flex; align-items: center; justify-content: center;
 }
 .hero-statement {
-  font-family: var(--font-display); font-style: italic; font-weight: 500;
+  font-family: var(--font-display); font-weight: 500;
   font-size: 1.3rem; color: var(--text); max-width: 620px; line-height: 1.5;
   opacity: 0.92;
 }
-.hero-statement em { color: var(--accent); font-style: italic; }
+.hero-statement em { color: var(--accent); font-style: normal; font-weight: 700; }
 .cursor {
   display: inline-block; width: 2px; height: 1em;
   background: var(--accent); margin-left: 2px; vertical-align: middle;
@@ -261,7 +263,7 @@ body::after {
 }
 .resume-btn-hero {
   display: inline-flex; align-items: center; gap: 8px;
-  color: #04121a; background: linear-gradient(135deg, var(--accent), var(--violet));
+  color: var(--on-accent); background: linear-gradient(135deg, var(--accent), var(--violet));
   padding: 13px 30px; border-radius: 30px; font-size: 0.9rem; font-weight: 700;
   text-decoration: none; transition: var(--ease);
 }
@@ -281,7 +283,7 @@ body::after {
 }
 
 /* ─── MAIN CONTAINER ─── */
-.container { max-width: 980px; margin: 0 auto; padding: 0 40px; }
+.container { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
 
 /* ─── SECTIONS ─── */
 .section {
@@ -350,8 +352,10 @@ body::after {
 
 /* ─── PROJECTS ─── */
 .project-grid {
-  display: grid; grid-template-columns: 1fr; gap: 18px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;
+  align-items: start;
 }
+.project-card.featured { grid-column: 1 / -1; }
 .project-card {
   background: var(--card); padding: 22px; border-radius: var(--r);
   border: 1px solid var(--border);
@@ -403,7 +407,7 @@ body::after {
   position: absolute; top: 16px; right: 16px; z-index: 2;
   display: inline-flex; align-items: center; gap: 4px;
   font-size: 0.66rem; font-weight: 700; letter-spacing: 0.6px;
-  color: #04121a; background: linear-gradient(135deg, var(--accent), var(--violet));
+  color: var(--on-accent); background: linear-gradient(135deg, var(--accent), var(--violet));
   padding: 4px 11px; border-radius: 20px;
 }
 .tech-tags {
@@ -453,8 +457,8 @@ body::after {
 }
 .marquee:hover .marquee-track { animation-play-state: paused; }
 .marquee-item {
-  font-family: var(--font-display); font-style: italic;
-  font-size: 1.5rem; font-weight: 500; color: var(--text-2);
+  font-family: var(--font-display);
+  font-size: 1.5rem; font-weight: 600; color: var(--text-2);
   padding: 0 28px; white-space: nowrap; display: flex; align-items: center; gap: 28px;
 }
 .marquee-item::after { content: '✦'; font-style: normal; font-size: 0.85rem; color: var(--accent); }
